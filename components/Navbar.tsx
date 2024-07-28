@@ -29,8 +29,8 @@ export default function Navbar({active}: Props) {
     <button onClick={()=>{setMobileNavOpen(!mobileNavOpen)}} className={'rounded-full p-3 md:hidden bg-white fixed top-4 right-4 z-50 transition-all duration-300 '+(mobileNavOpen?'':'shadow-md')}>
       {mobileNavOpen ? <Close className='text-3xl' /> : <Menu className='text-3xl' />}
     </button>
-    <nav className='z-40 fixed top-0 right-0 pt-20 bg-white shadow-md flex flex-col gap-6 w-48 rounded-sm text-right p-8 text-xl transition-all duration-300' style={
-      mobileNavOpen ? {clipPath: 'polygon(-5% 0, 100% 0, 100% 105%, 0% 105%)'} : {clipPath: 'polygon(90% 10%, 90% 10%, 90% 10%, 90% 10%)'}
+    <nav className='z-40 fixed top-0 right-0 bottom-0 pt-20 bg-white shadow-md flex flex-col gap-6 w-48 rounded-sm items-end p-8 text-xl transition-all duration-300' style={
+      mobileNavOpen ? {transform: 'translateX(0)'} : {transform: 'translateX(100%)'}
     } >
       <a href='/' className={`hover:font-semibold transition-all duration-300 ${active === 'home' ? 'font-semibold underline decoration-2 underline-offset-2' : ''}`}>Home</a>
       <a href='/about' className={`hover:font-semibold transition-all duration-300 ${active === 'about' ? 'font-semibold underline decoration-2 underline-offset-2' : ''}`}>About</a>
@@ -38,6 +38,7 @@ export default function Navbar({active}: Props) {
       <a href='/events' className={`hover:font-semibold transition-all duration-300 ${active === 'events' ? 'font-semibold underline decoration-2 underline-offset-2' : ''}`}>Events</a>
       <a href='/team' className={`hover:font-semibold transition-all duration-300 ${active === 'team' ? 'font-semibold underline decoration-2 underline-offset-2' : ''}`}>Team</a>
       <a href='/resources' className={`hover:font-semibold transition-all duration-300 ${active === 'resources' ? 'font-semibold underline decoration-2 underline-offset-2' : ''}`}>Resources</a>
+      <a href="/form" className='border-2 font-medium border-tertiary p-2 mt-3 w-max rounded-lg text-tertiary hover:bg-tertiary hover:text-white transition-all duration-300'>Join Us</a>
     </nav>
     </>
   )
