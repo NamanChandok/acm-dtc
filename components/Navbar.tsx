@@ -23,7 +23,7 @@ export default function Navbar({active}: Props) {
             <a href='/resources' className={`hover:font-semibold transition-all duration-300 ${active === 'resources' ? 'font-semibold underline decoration-2 underline-offset-2' : ''}`}>Resources</a>
         </div>
         <div className='h-max w-48 text-right'>
-            <a href="/form" className='border-2 font-medium border-tertiary py-2 px-8 rounded-lg text-tertiary hover:bg-tertiary hover:text-white transition-all duration-300'>Join Us</a>
+            <a href="https://linktr.ee/acm_dtc" target="_blank" className='border-2 font-medium border-tertiary py-2 px-8 rounded-lg text-tertiary hover:bg-tertiary hover:text-white transition-all duration-300'>Join Us</a>
         </div>
     </nav>
     <button onClick={()=>{setMobileNavOpen(!mobileNavOpen)}} className={'rounded-full p-3 md:hidden bg-white fixed top-4 right-4 z-50 transition-all duration-300 '+(mobileNavOpen?'':'shadow-md')}>

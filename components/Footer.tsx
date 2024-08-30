@@ -37,9 +37,9 @@ export default function Footer({}: Props) {
                     <a href="/team" className='text-quaternary tracking-wide hover:text-white transition-all duration-300'>Email: </a>
                     
                     <div className="space-x-2">
-                        <a href="" className="text-white hover:text-quaternary transition-all duration-300"><Instagram className="text-3xl" /></a>
-                        <a href="" className="text-white hover:text-quaternary transition-all duration-300"><LinkedIn className="text-3xl" /></a>
-                        <a href="" className="text-white hover:text-quaternary transition-all duration-300"><X className="text-3xl" /></a>
+                        <a href="https://www.instagram.com/acm_dtc/" target="_blank" className="text-white hover:text-quaternary transition-all duration-300"><Instagram className="text-3xl" /></a>
+                        <a href="https://www.linkedin.com/company/acm-student-chapter-delhi-technical-campus-ggsipu/" target="_blank" className="text-white hover:text-quaternary transition-all duration-300"><LinkedIn className="text-3xl" /></a>
+                        <a href="https://x.com/ACM_DTC" target="_blank" className="text-white hover:text-quaternary transition-all duration-300"><X className="text-3xl" /></a>
                     </div>
                 </div>
             </div>

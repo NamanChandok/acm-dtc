@@ -8,7 +8,7 @@ import { Quantico } from "next/font/google";
 const quantico = Quantico({subsets: ['latin'], weight: ['400', '700']});
 
 const team = [
-  {name: "Kartick Chauhaan", role: "Chairperson", image: "/team/kartick_c.jpeg", year: "4th Year, B.Tech CSE", linkedin: "/", mail: "/"},
+  {name: "Kartick Chauhaan", role: "Chairperson", image: "/team/kartick_c.jpeg", year: "4th Year, B.Tech CSE", linkedin: "https://www.linkedin.com/in/kartick-chauhaan-123172236/", mail: "mailto:chauhaankartick@gmail.com"},
   {name: "Ananya Mathur", role: "Vice Chairperson", image: "/team/ananya_m.jpeg", year: "4th Year, B.Tech CSE", linkedin: "/", mail: "/"},
   {name: "Kritagya Arora", role: "Webmaster", image: "/team/kritagya.jpg", year: "2nd Year, B.Tech CSE", linkedin: "/", mail: "/"},
   {name: "Kishika Sharma", role: "Secretary", image: "/team/kishika.png", year: "4th Year, B.Tech CSE", linkedin: "/", mail: "/"},

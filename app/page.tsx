@@ -88,13 +88,13 @@ export default function Home() {
 
           <div className="space-x-4">
             <a href="#about" className="btn-secondary">Know More</a>
-            <a href="/form" className="btn-primary">Join Us</a>
+            <a href="https://linktr.ee/acm_dtc" target="_blank" className="btn-primary">Join Us</a>
           </div>
 
           <div className="space-x-2">
-            <a href="" className="hover:text-primary transition-all duration-300"><Instagram className="text-4xl" /></a>
-            <a href="" className="hover:text-primary transition-all duration-300"><LinkedIn className="text-4xl" /></a>
-            <a href="" className="hover:text-primary transition-all duration-300"><X className="text-4xl" /></a>
+            <a href="https://www.instagram.com/acm_dtc/" target="_blank" className="hover:text-primary transition-all duration-300"><Instagram className="text-4xl" /></a>
+            <a href="https://www.linkedin.com/company/acm-student-chapter-delhi-technical-campus-ggsipu/" target="_blank" className="hover:text-primary transition-all duration-300"><LinkedIn className="text-4xl" /></a>
+            <a href="https://x.com/ACM_DTC" target="_blank" className="hover:text-primary transition-all duration-300"><X className="text-4xl" /></a>
           </div>
         </div>
 
@@ -188,11 +188,14 @@ export default function Home() {
             <img src="/team/kartick_c.jpeg" alt="" className="w-96 aspect-square object-cover object-top bg-slate-900" />
             <div className="p-8 space-y-4 pt-12">
               <h3 className="text-2xl md:text-3xl font-semibold">Kartick Chauhaan</h3>
-              <p className="max-w-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam natus vel repellat tempora consequatur quod.<br />
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, fugiat? Quo, magnam! At, fugit pariatur? Consequatur, rem maxime harum, inventore itaque quisquam nulla et odit delectus, necessitatibus perferendis aliquam aliquid.</p>
+              <p className="max-w-2xl">I&apos;m Kartick Chauhaan, a final-year Computer Science student and the proud Chairperson of our ACM Student Chapter. As your Chairperson, I&apos;m dedicated to fostering a vibrant community for computer science enthusiasts. Join us for exciting events, workshops, and networking opportunities.
+                <br /><br />
+                I encourage you to explore our website, join our events, and become an active member of our community. Together, we can shape the future of technology and make a positive impact on the world.
+                <br /><br />
+                Let&apos;s innovate, collaborate, and achieve great things together!</p>
               <div className="space-x-2">
-                <a href="" className="hover:text-primary transition-all duration-300"><LinkedIn className="text-4xl" /></a>
-                <a href="" className="hover:text-primary transition-all duration-300"><Email className="text-4xl" /></a>
+                <a href="https://www.linkedin.com/in/kartick-chauhaan-123172236/" target="_blank" className="hover:text-primary transition-all duration-300"><LinkedIn className="text-4xl" /></a>
+                <a href="mailto:chauhaankartick@gmail.com" target="_blank" className="hover:text-primary transition-all duration-300"><Email className="text-4xl" /></a>
               </div>
             </div>
           </div>

@@ -69,7 +69,7 @@ export default function About() {
 
           <div className="space-y-3">
             <h3 className="uppercase text-sm font-medium text-primary">About us</h3>
-            <h2 className={quantico.className+" uppercase text-4xl font-semibold"}>Association of Computing Machinery</h2>
+            <h2 className={quantico.className+" uppercase text-4xl font-semibold"}>Association for Computing Machinery</h2>
             <h3 className="text-xl font-medium">&quot;Advancing Computing as a Science & Profession&quot;</h3>
             <p>The Association for Computing Machinery (ACM) is an international learned society for computing. It was founded in 1947 and is the world&apos;s largest scientific and educational computing society. It is a not-for-profit professional membership group. Its membership is more than 100,000 as of 2011. Its headquarters are in New York City. The ACM is an umbrella organization for academic and scholarly interests in computer science.</p>
             <div className="grid md:grid-cols-2 gap-6 pt-4 md:pt-12">
@@ -91,6 +91,8 @@ export default function About() {
           </div>
 
           <img src="/about_logo.png" alt="about" className="md:block hidden object-contain aspect-[4/3]" />
+          
+          <iframe src="https://www.youtube.com/embed/cUCa76oCZgs?si=K_1MsTMrFgiHTZb_" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen className="md:col-span-2 w-full h-[35rem]"></iframe>
 
           <div className="space-y-3">
             <h3 className="uppercase text-sm font-medium text-primary">about acm dtc</h3>
@@ -106,8 +108,6 @@ export default function About() {
             <p onClick={()=>{setAccordian(3)}} className="p-3 bg-gray-100 cursor-pointer text-lg font-semibold flex justify-between">03. Our Vision <KeyboardArrowDown className={accordian == 3 ? "rotate-180" : ""} /></p>
             <div id="accordian3" className="px-3 transition-all duration-300 opacity-0 max-h-0 will-change-[max-height]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, maiores! Debitis error, obcaecati consequatur cum modi quo natus dolores nihil quae! Quia officiis voluptatibus, ipsa iste mollitia sequi officia quasi!</div>
           </div>
-
-          <iframe src="https://www.youtube.com/embed/cUCa76oCZgs?si=K_1MsTMrFgiHTZb_" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen className="col-span-2 w-full h-[35rem]"></iframe>
 
           <img src="/about_logo.png" alt="about" className="md:block hidden object-contain aspect-[4/3]" />
 
