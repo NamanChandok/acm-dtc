@@ -31,8 +31,8 @@ const team = [
   {name: "Naman Chandok", role: "Web Associate", image: "/team/naman.jpeg", year: "3rd Year, B.Tech CSE", linkedin: "https://www.linkedin.com/in/naman-chandok-874b421b0/", mail: "mailto:namanchandok1@gmail.com"},
   {name: "Yuvraj Singh", role: "Web Associate", image: "/team/yuvraj.jpeg", year: "3rd Year, B.Tech CSE", linkedin: "/", mail: "/"},
   {name: "Abhinav Chauhaan", role: "Videographer", image: "/team/abhinav.jpg", year: "2nd Year, B.Tech CSE", linkedin: "/", mail: "/"},
-  {name: "Brahmjyot Singh", role: "?", image: "/team/brahmjyot.jpg", year: "3rd Year, B.Tech CSE", linkedin: "/", mail: "/"},
-  {name: "Kartick Sharma", role: "?", image: "/team/kartick_s.jpg", year: "3rd Year, B.Tech CSE", linkedin: "/", mail: "/"},
+  {name: "Brahmjyot Singh", role: "Videographer", image: "/team/brahmjyot.jpg", year: "3rd Year, B.Tech CSE", linkedin: "/", mail: "/"},
+  {name: "Kartick Sharma", role: "Videographer", image: "/team/kartick_s.jpg", year: "3rd Year, B.Tech CSE", linkedin: "/", mail: "/"},
 ]
 
 export default function About() {
