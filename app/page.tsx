@@ -47,7 +47,6 @@ export default function Home() {
   });
 
   const mentors = [
-    {name: 'John Doe', role: 'Faculty Advisor', image: '/mentors/1.jpg'},
     {name: 'Jane Doe', role: 'Faculty Advisor', image: '/mentors/2.jpg'},
     {name: 'John Doe', role: 'Faculty Advisor', image: '/mentors/3.jpg'},
   ]
@@ -140,7 +139,7 @@ export default function Home() {
 
         <h2 className={quantico.className+" uppercase text-4xl font-semibold text-center"}>Meet our <span className="text-primary">{typewriter}</span></h2>
         
-        <div className="flex flex-col md:flex-row justify-between gap-8">
+        <div className="flex flex-col md:flex-row justify-center gap-12">
           {mentors.map((mentor, index) => (
             <div key={index} className="md:w-96 rounded-lg overflow-hidden shadow-md">
               <img src={mentor.image} alt={mentor.name} className="aspect-square" />
@@ -186,7 +185,7 @@ export default function Home() {
           <h2 className={quantico.className+" text-3xl font-semibold text-center uppercase"}>Meet our acm Chairperson</h2>
 
           <div className="rounded-xl bg-quaternary overflow-hidden mt-6 mb-8 flex md:flex-row-reverse flex-col md:justify-between">
-            <img src="/team/kartick.png" alt="" className="w-96 aspect-square bg-slate-900" />
+            <img src="/team/kartick_c.jpeg" alt="" className="w-96 aspect-square object-cover object-top bg-slate-900" />
             <div className="p-8 space-y-4 pt-12">
               <h3 className="text-2xl md:text-3xl font-semibold">Kartick Chauhaan</h3>
               <p className="max-w-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam natus vel repellat tempora consequatur quod.<br />

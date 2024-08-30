@@ -107,6 +107,8 @@ export default function About() {
             <div id="accordian3" className="px-3 transition-all duration-300 opacity-0 max-h-0 will-change-[max-height]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, maiores! Debitis error, obcaecati consequatur cum modi quo natus dolores nihil quae! Quia officiis voluptatibus, ipsa iste mollitia sequi officia quasi!</div>
           </div>
 
+          <iframe src="https://www.youtube.com/embed/cUCa76oCZgs?si=K_1MsTMrFgiHTZb_" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen className="col-span-2 w-full h-[35rem]"></iframe>
+
           <img src="/about_logo.png" alt="about" className="md:block hidden object-contain aspect-[4/3]" />
 
           <div className="space-y-3">
