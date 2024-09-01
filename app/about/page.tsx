@@ -103,10 +103,10 @@ export default function About() {
           <div className="border-2 border-gray-200 rounded-md divide-y-2 divide-gray-200">
             <p onClick={()=>{setAccordian(1)}} className="p-3 bg-gray-100 cursor-pointer text-lg font-semibold flex justify-between">01. Our Mission <KeyboardArrowDown className={accordian == 1 ? "rotate-180" : ""} /></p>
             <div id="accordian1" className="px-3 transition-all duration-300 opacity-0 max-h-0 will-change-[max-height]">To advance the field of computing and empower individuals within it, promoting innovation and excellence in computing education, research, and practice, while fostering a global community that collaborates, shares knowledge, and addresses critical societal challenges.</div>
-            <p onClick={()=>{setAccordian(2)}} className="p-3 bg-gray-100 cursor-pointer text-lg font-semibold flex justify-between">02. Our Plan <KeyboardArrowDown className={accordian == 2 ? "rotate-180" : ""} /></p>
-            <div id="accordian2" className="px-3 transition-all duration-300 opacity-0 max-h-0 will-change-[max-height]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, maiores! Debitis error, obcaecati consequatur cum modi quo natus dolores nihil quae! Quia officiis voluptatibus, ipsa iste mollitia sequi officia quasi!</div>
-            <p onClick={()=>{setAccordian(3)}} className="p-3 bg-gray-100 cursor-pointer text-lg font-semibold flex justify-between">03. Our Vision <KeyboardArrowDown className={accordian == 3 ? "rotate-180" : ""} /></p>
-            <div id="accordian3" className="px-3 transition-all duration-300 opacity-0 max-h-0 will-change-[max-height]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, maiores! Debitis error, obcaecati consequatur cum modi quo natus dolores nihil quae! Quia officiis voluptatibus, ipsa iste mollitia sequi officia quasi!</div>
+            <p onClick={()=>{setAccordian(2)}} className="p-3 bg-gray-100 cursor-pointer text-lg font-semibold flex justify-between">02. Our Vision <KeyboardArrowDown className={accordian == 2 ? "rotate-180" : ""} /></p>
+            <div id="accordian2" className="px-3 transition-all duration-300 opacity-0 max-h-0 will-change-[max-height]">Our vision is to be the leading global community that empowers computing professionals, students, and researchers by driving technological innovation, bridging academia and industry, and fostering inclusivity. We aim to create a collaborative environment where everyone, regardless of background, can access opportunities in computing and contribute to the advancement of society through responsible and transformative technology.</div>
+            <p onClick={()=>{setAccordian(3)}} className="p-3 bg-gray-100 cursor-pointer text-lg font-semibold flex justify-between">03. Our Plan <KeyboardArrowDown className={accordian == 3 ? "rotate-180" : ""} /></p>
+            <div id="accordian3" className="px-3 transition-all duration-300 opacity-0 max-h-0 will-change-[max-height]">To achieve our vision, we will organize educational and networking events, publish and share knowledge, build strategic partnerships, and support student development. Through workshops, seminars, hackathons, and collaborations, we aim to foster a thriving ecosystem where computing professionals can excel, students can reach their full potential, and society can benefit from the transformative power of technology</div>
           </div>
 
           <img src="/about_logo.png" alt="about" className="md:block hidden object-contain aspect-[4/3]" />
@@ -116,7 +116,7 @@ export default function About() {
             <p>A vast network of nearly 100,000 highly dedicated student and professional peers. A full year subscription to ACM magazines and news letters (Communications of the ACM, XRDS: Crossroads, MemberNet etc.). The option to subscribe to the full ACM Digital Library, which includes over 2 million pages of text. Become a member of computing community through one of hundreds of Professional and Student Chapters worldwide. Participation in ACM Distinguished Speakers Program (DSP). Renowned International Thought Leaders Speaking on the Most Important Topics in Computing Today. Unique volunteering opportunities to gain hands-on experience and knowledge of the marketplace.</p>
             <div className="space-x-2 pt-4">
               <a href="/" className="btn-primary">Learn More</a>
-              <a href="/" className="btn-secondary">Form Link</a>
+              <a href="https://linktr.ee/acm_dtc" className="btn-secondary">Join Us</a>
             </div>
           </div>
 

@@ -22,7 +22,12 @@ export default function Gallery() {
   useEffect(() => {
     fetch("/api/getGallery")
       .then(res => res.json())
-      .then(data => setFolders(data));
+      .then(data => {
+        const sorted = [...data].sort((a, b) => {
+          return new Date(b.date).getTime() - new Date(a.date).getTime();
+        });
+        setFolders(sorted);
+      });
   }, []);
 
   return (

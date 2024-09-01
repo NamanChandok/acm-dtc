@@ -14,7 +14,7 @@ export async function GET(request: NextRequest) {
     const folders = dir.filter(folder => folder.split('.').length == 1);
     folders?.map(folder => {
         const files = fs.readdirSync(`public/gallery/${folder}`);
-        const images = files.filter(file => file.endsWith('.jpg') || file.endsWith('.jpeg') || file.endsWith('.png'));
+        const images = files.filter(file => file.toLowerCase().endsWith('.jpg') || file.toLowerCase().endsWith('.jpeg') || file.toLowerCase().endsWith('.png'));
         const date = files.filter(file => file.endsWith('.txt'))[0]?.split('.')[0];
         gallery.push({name: folder, date: date, images: images});
     });

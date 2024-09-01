@@ -13,6 +13,7 @@ export default function Home() {
 
   const [eventScroll, setEventScroll] = useState(0);
   const [eventScrollMax, setEventScrollMax] = useState(0);
+  const [subscribed, setSubscribed] = useState(false);
 
   useEffect(() => {
     const events = document.getElementById('scroller') as HTMLElement;
@@ -67,6 +68,14 @@ export default function Home() {
     {img: 'resources/3.jpg', link: '/resources/3.pdf'},
     {img: 'resources/4.jpg', link: '/resources/4.pdf'},
   ]
+
+  const handleSubscribe = (e:any) => {
+    e.preventDefault();
+    const email = e.target[0].value;
+    console.log('Subscribed', email);
+
+    setSubscribed(true);
+  }
 
   return (
     <main>
@@ -185,7 +194,7 @@ export default function Home() {
           <h2 className={quantico.className+" text-3xl font-semibold text-center uppercase"}>Meet our acm Chairperson</h2>
 
           <div className="rounded-xl bg-quaternary overflow-hidden mt-6 mb-8 flex md:flex-row-reverse flex-col md:justify-between">
-            <img src="/team/kartick_c.jpeg" alt="" className="w-96 aspect-square object-cover object-top bg-slate-900" />
+            <img src="/team/kartick_c.jpg" alt="" className="w-96 aspect-square object-cover object-top bg-slate-900" />
             <div className="p-8 space-y-4 pt-12">
               <h3 className="text-2xl md:text-3xl font-semibold">Kartick Chauhaan</h3>
               <p className="max-w-2xl">I&apos;m Kartick Chauhaan, a final-year Computer Science student and the proud Chairperson of our ACM Student Chapter. As your Chairperson, I&apos;m dedicated to fostering a vibrant community for computer science enthusiasts. Join us for exciting events, workshops, and networking opportunities.
@@ -232,11 +241,11 @@ export default function Home() {
         <div className="rounded-xl bg-gray-700 md:p-8 p-6 md:py-24 md:px-16 md:mt-32 mt-12 flex flex-col md:flex-row gap-8 md:justify-between items-center">
           <h4 className={quantico.className+" text-white text-3xl font-semibold uppercase tracking-wide"}>Subscribe to our NEWSLETTER</h4>
           
-          <form className="flex flex-col md:flex-row overflow-hidden bg-white md:w-2/5 w-full rounded-lg">
-            <input type="email" placeholder="Enter your email" className="p-4 w-full rounded-lg" />
+          {subscribed ? <p className="text-white font-medium opacity-80">Thanks for Subscribing!</p> :
+          <form onSubmit={handleSubscribe} className="flex flex-col md:flex-row overflow-hidden bg-white md:w-2/5 w-full rounded-lg">
+            <input type="email" required placeholder="Enter your email" className="p-4 w-full rounded-lg" />
             <input type="submit" className="p-4 bg-primary text-white cursor-pointer hover:bg-primary/90 transition-all duration-300 rounded-l-none text-sm uppercase" value="subscribe" />
-          </form>
-
+          </form>}
         </div>
 
       </section>
