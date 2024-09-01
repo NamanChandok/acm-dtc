@@ -42,7 +42,7 @@ export default function Events() {
         {events.filter(event => new Date(event.date).getTime() > new Date().getTime())
         .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
         .map((event, index) => {
-          return (<div className="bg-[#eee] rounded-md overflow-hidden h-40 flex">
+          return (<div key={index} className="bg-[#eee] rounded-md overflow-hidden h-40 flex">
             <img src={event.image} alt={event.name} className="w-1/3 object-cover object-center" />
             <div className="space-y-4 p-4 relative w-2/3">
               <small>{event.date}</small>
@@ -59,7 +59,7 @@ export default function Events() {
       {events.filter(event => new Date(event.date).getTime() < new Date().getTime())
       .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
       .map((event, index) => {
-        return (<div className="bg-[#eee] rounded-md overflow-hidden flex flex-col">
+        return (<div key={index} className="bg-[#eee] rounded-md overflow-hidden flex flex-col">
           <img src={event.image} alt={event.name} className="h-40 object-cover object-center" />
           <div className="space-y-2 p-4 relative">
             <small>{event.date}</small>
