@@ -1,2 +1,0 @@
-Create jpg file with same name as pdf using https://www.ilovepdf.com/pdf_to_jpg
-This will work as thumbnail

@@ -1,6 +1,0 @@
-Add folders to create new events on gallery page
-Folder name = Event Name
-add .txt file named as event date
-example: 
-folder name = ACM x HTM
-inside folder -> 30 August 2024.txt and photos from event

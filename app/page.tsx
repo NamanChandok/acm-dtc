@@ -2,10 +2,13 @@
 import Navbar from "@/components/Navbar";
 import EventCard from "@/components/EventCard";
 import Footer from "@/components/Footer";
-import { Instagram, LinkedIn, X, ArrowLeft, ArrowRight, ArrowOutward, Email } from "@mui/icons-material";
+import { Instagram, LinkedIn, X, ArrowLeft, ArrowRight, ArrowOutward, Email, PictureAsPdf, Download } from "@mui/icons-material";
 import { Quantico } from "next/font/google";
 import { Typewriter } from "react-simple-typewriter";
 import { useEffect, useState } from "react";
+import { listAll, ref } from "firebase/storage";
+import { db, storage } from "@/firebase";
+import { collection, getDocs } from "firebase/firestore";
 
 const quantico = Quantico({subsets: ['latin'], weight: ['400', '700']});
 
@@ -14,13 +17,46 @@ export default function Home() {
   const [eventScroll, setEventScroll] = useState(0);
   const [eventScrollMax, setEventScrollMax] = useState(0);
   const [subscribed, setSubscribed] = useState(false);
-  const [resources, setResources] = useState([]);
+
+  const [resources, setResources] = useState<string[]>([]);
+  
+  interface Event {
+    name: string,
+    date: string,
+    cover: string,
+    link: string,
+    description: string,
+    id: string
+  }
+
+  const [events, setEvents] = useState<Event[]>([]);
 
   useEffect(() => {
+    const a:Event[] = []
+    const eventsRef = collection(db, 'events');
+    getDocs(eventsRef).then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        a.push({
+          name: doc.data().name,
+          date: doc.data().date,
+          cover: doc.data().cover,
+          link: doc.data().link,
+          description: doc.data().description,
+          id: doc.id
+        });
+      });
+      setEvents(a);
+    });
+    
+    const resourcesRef = ref(storage, 'resources');
 
-    fetch("/api/getResources")
-      .then(res => res.json())
-      .then(data => setResources(data));
+    listAll(resourcesRef).then((res) => {
+      const r:string[] = []
+      res.items.forEach((itemRef) => {
+        r.push(itemRef.name)
+      });
+      setResources(r);
+    })
 
     const events = document.getElementById('scroller') as HTMLElement;
     const left = document.getElementById('scrollLeft') as HTMLElement;
@@ -58,15 +94,6 @@ export default function Home() {
     {name: 'John Doe', role: 'Faculty Advisor', image: '/mentors/3.jpg'},
   ]
 
-
-  const events = [
-    {name: 'Event 1', date: '01/01/2021', image: '/events/1.jpg', link: '/events/1'},
-    {name: 'Event 2', date: '01/01/2022', image: '/events/1.jpg', link: '/events/1'},
-    {name: 'Event 3', date: '01/01/2023', image: '/events/1.jpg', link: '/events/1'},
-    {name: 'Event 4', date: '01/01/2024', image: '/events/1.jpg', link: '/events/1'},
-    {name: 'Event 5', date: '01/02/2025', image: '/events/1.jpg', link: '/events/1'},
-    {name: 'Event 6', date: '01/03/2025', image: '/events/1.jpg', link: '/events/1'},
-  ]
 
   const handleSubscribe = (e:any) => {
     e.preventDefault();
@@ -224,19 +251,17 @@ export default function Home() {
 
           <div className="flex flex-col md:flex-row justify-between gap-4 mb-4">
             {resources.map((resource:String, index) => {
-              const imgPath = resource.replace('pdf', 'jpg');
-              return <a key={index} target='_blank' href={`/resources/${resource}`} className="rounded-lg border-2 border-black overflow-hidden z-10 relative group h-96 md:w-72 shadow-sm translate-y-4 hover:translate-y-0 hover:shadow-md transition-all duration-300">
-                <img src={`/resources/${imgPath}`} alt="" className="h-full w-full object-cover" />
-                <div className="bg-black/40 flex flex-col gap-2 items-center justify-center group-hover:opacity-100 opacity-0 transition-all duration-300 absolute inset-0 z-20">
-                  <small className="text-white">{resource}</small>
-                  <div className="bg-black text-white p-4 rounded-full">
-                    <ArrowOutward className="text-5xl" />
+              return <a key={index} target='_blank' href={'https://firebasestorage.googleapis.com/v0/b/acm-dtc.appspot.com/o/resources%2F'+resource+'?alt=media'} className="rounded-lg border-2 border-black overflow-hidden z-10 relative h-96 md:w-72 shadow-sm translate-y-4 hover:translate-y-0 hover:shadow-md transition-all duration-300">
+                <div className="w-full h-full flex flex-col gap-4 items-center justify-center">
+                  <PictureAsPdf className="text-6xl" />
+                  <p>{resource}</p>
+                  <div className="bg-black flex items-center gap-3 text-white p-2 rounded-xl">
+                    <Download className="text-2xl" />
+                    Download
                   </div>
-                  <small className="text-white">Download</small>
                 </div>
               </a>
             })}
-
           </div>   
 
         {/* NEWSLETTER */}
