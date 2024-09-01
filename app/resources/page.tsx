@@ -39,7 +39,7 @@ export default function Resources() {
       <div className="grid md:grid-cols-4 gap-4">
         {resources.map((resource:String, index) => {
           return <a key={index} target='_blank' href={'https://firebasestorage.googleapis.com/v0/b/acm-dtc.appspot.com/o/resources%2F'+resource+'?alt=media'} className="rounded-lg border-2 border-black overflow-hidden z-10 relative h-96 md:w-72 shadow-sm translate-y-4 hover:translate-y-0 hover:shadow-md transition-all duration-300">
-            <div className="w-full h-full flex flex-col gap-4 items-center justify-center">
+            <div className="w-full h-full flex flex-col gap-4 items-center p-4 justify-center">
               <PictureAsPdf className="text-6xl" />
               <p>{resource}</p>
               <div className="bg-black flex items-center gap-3 text-white p-2 rounded-xl">

@@ -52,7 +52,8 @@ export default function Home() {
 
     listAll(resourcesRef).then((res) => {
       const r:string[] = []
-      res.items.forEach((itemRef) => {
+      res.items.forEach((itemRef, index) => {
+        if (index > 3) return
         r.push(itemRef.name)
       });
       setResources(r);
