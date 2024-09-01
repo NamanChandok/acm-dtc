@@ -6,10 +6,9 @@ type Props = {
     name: string,
     date: string,
     cover: string,
-    link: string
 }
 
-export default function EventCard({id, name, date, cover, link}: Props) {
+export default function EventCard({id, name, date, cover}: Props) {
   return (
     <div className='rounded-lg w-80 flex-shrink-0 shadow-md overflow-hidden'>
         <img src={cover} alt={name} className='aspect-square w-full bg-[#eee] object-cover' />
