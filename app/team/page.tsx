@@ -35,7 +35,7 @@ const team = [
   {name: "Kartick Sharma", role: "Videographer", image: "/team/kartick_s.jpg", year: "3rd Year, B.Tech CSE", linkedin: "/", mail: "/"},
 ]
 
-export default function About() {
+export default function Team() {
 
   return (
     <main>
@@ -44,7 +44,7 @@ export default function About() {
 
       {/* HERO */}
 
-      <Hero page="Team" image="" />
+      <Hero page="Team" />
 
       {/* TEAM */}
 

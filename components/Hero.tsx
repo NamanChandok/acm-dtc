@@ -6,13 +6,12 @@ const quantico = Quantico({subsets: ['latin'], weight: ['400', '700']})
 
 type Props = {
     page: string,
-    image: string
 }
 
-export default function Hero({page, image}: Props) {
+export default function Hero({page}: Props) {
   return (
     <div className='md:mt-20 px-8 py-12 md:px-32 md:py-24 relative text-white space-y-4 bg-cover bg-center' style={{
-        backgroundImage: `url(${image})`
+        backgroundImage:  "url(/about_header.jpg)"
     }}>
         <div className='inset-0 absolute bg-slate-900/30'></div>
         <h1 className={quantico.className+' font-semibold text-3xl relative z-30'}>{page}</h1>

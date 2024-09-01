@@ -37,7 +37,7 @@ export default function Gallery() {
 
       {/* HERO */}
 
-      <Hero page="Gallery" image="" />
+      <Hero page="Gallery" />
 
       {/* GALLERY */}
 

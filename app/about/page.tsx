@@ -58,7 +58,7 @@ export default function About() {
 
       {/* HERO */}
 
-      <Hero page="About" image="/about_header.jpg" />
+      <Hero page="About" />
 
       {/* ABOUT */}
 

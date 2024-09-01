@@ -34,7 +34,7 @@ export default function Footer({}: Props) {
                 <div className='flex flex-col gap-6 w-60'>
                     <h4 className={quantico.className+' uppercase text-xl md:mb-4 text-white font-semibold tracking-wider'}>Contact Info</h4>
                     <p className='text-quaternary tracking-wide'>Delhi Technical Campus, <br />Knowledge Park-II,<br /> Greater Noida</p>
-                    <a href="/team" className='text-quaternary tracking-wide hover:text-white transition-all duration-300'>Email: </a>
+                    <a href="mailto:acmschapter@delhitechnicalcampus.ac.in" target='_blank' className='text-quaternary tracking-wide hover:text-white transition-all duration-300'>Email: acmschapter@<br />delhitechnicalcampus.ac.in</a>
                     
                     <div className="space-x-2">
                         <a href="https://www.instagram.com/acm_dtc/" target="_blank" className="text-white hover:text-quaternary transition-all duration-300"><Instagram className="text-3xl" /></a>

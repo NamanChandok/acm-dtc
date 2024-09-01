@@ -10,12 +10,18 @@ import { useEffect, useState } from "react";
 const quantico = Quantico({subsets: ['latin'], weight: ['400', '700']});
 
 export default function Home() {
-
+    
   const [eventScroll, setEventScroll] = useState(0);
   const [eventScrollMax, setEventScrollMax] = useState(0);
   const [subscribed, setSubscribed] = useState(false);
+  const [resources, setResources] = useState([]);
 
   useEffect(() => {
+
+    fetch("/api/getResources")
+      .then(res => res.json())
+      .then(data => setResources(data));
+
     const events = document.getElementById('scroller') as HTMLElement;
     const left = document.getElementById('scrollLeft') as HTMLElement;
     const right = document.getElementById('scrollRight') as HTMLElement;
@@ -58,15 +64,8 @@ export default function Home() {
     {name: 'Event 2', date: '01/01/2022', image: '/events/1.jpg', link: '/events/1'},
     {name: 'Event 3', date: '01/01/2023', image: '/events/1.jpg', link: '/events/1'},
     {name: 'Event 4', date: '01/01/2024', image: '/events/1.jpg', link: '/events/1'},
-    {name: 'Event 5', date: '01/02/2024', image: '/events/1.jpg', link: '/events/1'},
-    {name: 'Event 6', date: '01/03/2024', image: '/events/1.jpg', link: '/events/1'},
-  ]
-
-  const resources = [
-    {img: 'resources/1.jpg', link: '/resources/1.pdf'},
-    {img: 'resources/2.jpg', link: '/resources/2.pdf'},
-    {img: 'resources/3.jpg', link: '/resources/3.pdf'},
-    {img: 'resources/4.jpg', link: '/resources/4.pdf'},
+    {name: 'Event 5', date: '01/02/2025', image: '/events/1.jpg', link: '/events/1'},
+    {name: 'Event 6', date: '01/03/2025', image: '/events/1.jpg', link: '/events/1'},
   ]
 
   const handleSubscribe = (e:any) => {
@@ -177,9 +176,10 @@ export default function Home() {
             } />
 
             <div className="overflow-x-scroll flex gap-4 py-4" id="scroller">
-              {events.map((event, index) => (
-                <EventCard key={index} {...event} />
-              ))}
+              {events.sort((a,b)=>(new Date(b.date).getTime() - new Date(a.date).getTime())).map((event, index) => {
+                if (new Date(event.date).getTime() > new Date().getTime()) return
+                return <EventCard key={index} {...event} />
+              })}
             </div>
 
             <ArrowRight id="scrollRight" className="absolute -right-4 top-0 bottom-0 m-auto text-4xl text-primary bg-quaternary shadow-md rounded-full cursor-pointer" style={
@@ -223,17 +223,20 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col md:flex-row justify-between gap-4 mb-4">
-            {resources.map((resource, index) => (
-              <a key={index} href={resource.link} className="rounded-lg overflow-hidden z-10 relative group h-96 md:w-72 shadow-sm translate-y-4 hover:translate-y-0 hover:shadow-md transition-all duration-300">
-                <img src={resource.img} alt="" className="h-full w-full object-cover" />
-                <div className="bg-black/20 flex flex-col gap-2 items-center justify-center group-hover:opacity-100 opacity-0 transition-all duration-300 absolute inset-0 z-20">
+            {resources.map((resource:String, index) => {
+              const imgPath = resource.replace('pdf', 'jpg');
+              return <a key={index} target='_blank' href={`/resources/${resource}`} className="rounded-lg border-2 border-black overflow-hidden z-10 relative group h-96 md:w-72 shadow-sm translate-y-4 hover:translate-y-0 hover:shadow-md transition-all duration-300">
+                <img src={`/resources/${imgPath}`} alt="" className="h-full w-full object-cover" />
+                <div className="bg-black/40 flex flex-col gap-2 items-center justify-center group-hover:opacity-100 opacity-0 transition-all duration-300 absolute inset-0 z-20">
+                  <small className="text-white">{resource}</small>
                   <div className="bg-black text-white p-4 rounded-full">
                     <ArrowOutward className="text-5xl" />
                   </div>
                   <small className="text-white">Download</small>
                 </div>
               </a>
-            ))}
+            })}
+
           </div>   
 
         {/* NEWSLETTER */}
