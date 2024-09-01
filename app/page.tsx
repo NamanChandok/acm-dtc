@@ -250,7 +250,7 @@ export default function Home() {
             <a href="/resources" className="capitalize text-right underline underline-offset-2 decoration-2 decoration-primary text-primary text-lg font-medium">see more</a>
           </div>
 
-          <div className="flex flex-col md:flex-row justify-between gap-4 mb-4">
+          <div className="grid md:grid-cols-4 gap-4 mb-4">
             {resources.map((resource:String, index) => {
               return <a key={index} target='_blank' href={'https://firebasestorage.googleapis.com/v0/b/acm-dtc.appspot.com/o/resources%2F'+resource+'?alt=media'} className="rounded-lg border-2 border-black overflow-hidden z-10 relative h-96 md:w-72 shadow-sm translate-y-4 hover:translate-y-0 hover:shadow-md transition-all duration-300">
                 <div className="w-full h-full flex flex-col gap-4 items-center justify-center">
