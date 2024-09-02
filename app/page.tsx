@@ -116,7 +116,7 @@ export default function Home() {
 
       {/* HERO */}
 
-      <section className="flex flex-col md:flex-row-reverse items-center gap-8 md:justify-between justify-center h-screen p-8 md:px-32 shadow-lg">
+      <section className="flex flex-col md:flex-row-reverse items-center gap-8 md:justify-between justify-center h-screen p-8 md:px-16 lg:px-32 shadow-lg">
 
         <img src="/header-logo.png" alt="acm-dtc" className="hidden md:block w-96 aspect-square rounded-xl" />
 
@@ -143,7 +143,7 @@ export default function Home() {
 
       {/* ABOUT */}
 
-      <section className="px-8 md:px-32 md:py-20 py-12 space-y-12" id="about">
+      <section className="px-8 md:px-16 lg:px-32 md:py-20 py-12 space-y-12" id="about">
 
         <div className="flex flex-col md:flex-row md:gap-16 gap-8">
           <img src="/about1.svg" alt="about" className="md:w-1/2 aspect-video" />
@@ -176,7 +176,7 @@ export default function Home() {
 
       {/* MENTORS */}
 
-      <section className="bg-quaternary px-8 md:px-32 md:py-20 py-12 space-y-12">
+      <section className="bg-quaternary px-8 md:px-16 lg:px-32 md:py-20 py-12 space-y-12">
 
         <h2 className={quantico.className+" uppercase text-4xl font-semibold text-center"}>Meet our <span className="text-primary">{typewriter}</span></h2>
         
@@ -194,7 +194,7 @@ export default function Home() {
 
       </section>
 
-      <section className="px-8 md:px-32 md:py-20 py-12">
+      <section className="px-8 md:px-16 lg:px-32 md:py-20 py-12">
 
         {/* EVENTS */}
 

@@ -48,15 +48,16 @@ export default function Team() {
 
       {/* TEAM */}
 
-      <section className="px-8 md:px-32 md:py-20 py-12 space-y-8">
+      <section className="px-8 md:px-16 lg:px-32 md:py-20 py-12 space-y-8">
 
-        <div className="grid md:grid-cols-4 place-items-center gap-6">
-          <p></p>
+        <div className="grid md:grid-cols-3 lg:grid-cols-4 place-items-center gap-6">
+          <div className="flex flex-col md:flex-row lg:gap-8 gap-6 justify-center md:col-span-3 lg:col-span-4">
+            {team.map((member, index) => {
+              if (index < 2) return (<TeamCard key={index} {...member} />)
+              })}
+          </div>
         {team.map((member, index) => {
-           return (<>
-            <TeamCard key={index} {...member} />
-            {index == 1 ? <p></p> : null}
-            </>)
+          if (index > 1) return (<TeamCard key={index} {...member} />)
         })}
         </div>
 

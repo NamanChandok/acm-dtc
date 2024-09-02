@@ -8,7 +8,7 @@ type Props = {}
 
 export default function Footer({}: Props) {
   return (
-    <section className='px-8 py-12 md:px-32 md:py-20 bg-slate-900 flex flex-col md:flex-row md:justify-between gap-10 md:gap-32'>
+    <section className='px-8 py-12 md:px-16 lg:px-32 md:py-20 bg-slate-900 flex flex-col md:flex-row md:justify-between gap-10 md:gap-32'>
         
         <div className='space-y-6 w-72'>
             <img src="/footer-logo.svg" alt="acm dtc" className='w-60 rounded-md' />

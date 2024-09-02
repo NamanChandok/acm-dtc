@@ -62,7 +62,7 @@ export default function Events(props:any) {
 
       {/* EVENTS */}
 
-      <section className="px-8 md:px-32 md:py-20 py-12 space-y-6">
+      <section className="px-8 md:px-16 lg:px-32 md:py-20 py-12 space-y-6">
 
         {event && <>
         

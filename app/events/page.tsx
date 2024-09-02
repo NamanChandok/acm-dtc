@@ -54,7 +54,7 @@ export default function Events() {
 
       {/* EVENTS */}
 
-      <section className="px-8 md:px-32 md:py-20 py-12 space-y-6">
+      <section className="px-8 md:px-16 lg:px-32 md:py-20 py-12 space-y-6">
 
       {events.filter(event => new Date(event.date).getTime() > new Date().getTime()).length == 0 ? '' :
       <h3 className={quantico.className+" font-semibold text-3xl uppercase flex items-center gap-4"}><CalendarMonth fontSize="large" /> Upcoming events</h3>}

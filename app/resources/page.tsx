@@ -39,7 +39,7 @@ export default function Resources() {
 
       {/* RESOURCES */}
 
-      <section className="px-8 md:px-32 md:py-20 py-12 space-y-12">
+      <section className="px-8 md:px-16 lg:px-32 md:py-20 py-12 space-y-12">
 
       <div className="grid md:grid-cols-4 gap-4">
         {resources.map((resource:String, index) => {

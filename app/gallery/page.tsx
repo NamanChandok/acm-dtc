@@ -58,7 +58,7 @@ export default function Gallery() {
 
       {/* GALLERY */}
 
-      <section className="px-8 md:px-32 md:py-20 py-12 space-y-12">
+      <section className="px-8 md:px-16 lg:px-32 md:py-20 py-12 space-y-12">
 
         {folders.sort((a,b)=>(new Date(b.date).getTime() - new Date(a.date).getTime())).map((event, index) => {
           return (<div className="space-y-4" key={index}>

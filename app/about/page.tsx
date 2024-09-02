@@ -62,7 +62,7 @@ export default function About() {
 
       {/* ABOUT */}
 
-      <section className="px-8 md:px-32 md:py-20 py-12 md:space-y-40 space-y-12">
+      <section className="px-8 md:px-16 lg:px-32 md:py-20 py-12 md:space-y-40 space-y-12">
 
         <div className="grid md:grid-cols-2 md:gap-24 gap-12">
           <img src="/about_logo.png" alt="about" className="md:hidden block object-contain aspect-[4/3]" />
