@@ -2,18 +2,23 @@
 import Navbar from "@/components/Navbar";
 import EventCard from "@/components/EventCard";
 import Footer from "@/components/Footer";
-import { Instagram, LinkedIn, X, ArrowLeft, ArrowRight, ArrowOutward, Email, PictureAsPdf, Download } from "@mui/icons-material";
+import { Instagram, LinkedIn, X, ArrowLeft, ArrowRight, Email, ArrowOutward } from "@mui/icons-material";
 import { Quantico } from "next/font/google";
 import { Typewriter } from "react-simple-typewriter";
 import { useEffect, useState } from "react";
 import { listAll, ref } from "firebase/storage";
 import { db, storage } from "@/firebase";
 import { collection, getDocs } from "firebase/firestore";
+import { pdfjs, Document, Page } from "react-pdf";
+import 'react-pdf/dist/Page/AnnotationLayer.css';
+import 'react-pdf/dist/Page/TextLayer.css';
 
 const quantico = Quantico({subsets: ['latin'], weight: ['400', '700']});
 
 export default function Home() {
     
+  pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;  
+
   const [eventScroll, setEventScroll] = useState(0);
   const [eventScrollMax, setEventScrollMax] = useState(0);
   const [subscribed, setSubscribed] = useState(false);
@@ -87,12 +92,11 @@ export default function Home() {
     cursor: true,
     cursorStyle: '_',
     delaySpeed: 3000,
-    words: ['mentors', 'guides', 'teachers']
+    words: ['mentor', 'guide', 'teacher']
   });
 
   const mentors = [
-    {name: 'Jane Doe', role: 'Faculty Advisor', image: '/mentors/2.jpg'},
-    {name: 'John Doe', role: 'Faculty Advisor', image: '/mentors/3.jpg'},
+    {name: 'Dr. Neha Jain', role: 'Faculty Sponsor', image: '/mentors/2.jpg'},
   ]
 
 
@@ -252,14 +256,17 @@ export default function Home() {
 
           <div className="grid md:grid-cols-4 gap-4 mb-4">
             {resources.map((resource:String, index) => {
-              return <a key={index} target='_blank' href={'https://firebasestorage.googleapis.com/v0/b/acm-dtc.appspot.com/o/resources%2F'+resource+'?alt=media'} className="rounded-lg border-2 border-black overflow-hidden z-10 relative h-96 md:w-72 shadow-sm translate-y-4 hover:translate-y-0 hover:shadow-md transition-all duration-300">
-                <div className="w-full h-full flex flex-col gap-4 items-center justify-center">
-                  <PictureAsPdf className="text-6xl" />
-                  <p>{resource}</p>
-                  <div className="bg-black flex items-center gap-3 text-white p-2 rounded-xl">
-                    <Download className="text-2xl" />
-                    Download
+              const pdfUrl = 'https://firebasestorage.googleapis.com/v0/b/acm-dtc.appspot.com/o/resources%2F'+resource+'?alt=media'
+              return <a target="_blank" key={index} href={pdfUrl} className="border-2 border-black rounded-lg overflow-hidden z-10 relative group h-96 md:w-72 shadow-sm hover:shadow-md transition-all duration-300 justify-center items-center flex">
+                <Document file={pdfUrl}>
+                  <Page pageNumber={1} width={280} />
+                </Document>
+                <div className="bg-black/40 flex flex-col gap-2 items-center justify-center group-hover:opacity-100 opacity-0 transition-all duration-300 absolute inset-0 z-20">
+                  <p className="text-white">{resource}</p>
+                  <div className="bg-black text-white p-4 rounded-full">
+                    <ArrowOutward className="text-5xl" />
                   </div>
+                  <small className="text-white">Download</small>
                 </div>
               </a>
             })}

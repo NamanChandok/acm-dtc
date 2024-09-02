@@ -12,7 +12,7 @@ export default function Footer({}: Props) {
         
         <div className='space-y-6 w-72'>
             <img src="/footer-logo.svg" alt="acm dtc" className='w-60 rounded-md' />
-            <p className='text-quaternary text-sm'>ACM boosts up the potential and talent, supporting the overall development needs of our students to facilitate a structured path from education to employment by providing a safe and supported space where creative talent  and imagination can flourish in a caring environment.</p>
+            <p className='text-quaternary text-sm text-justify'>ACM boosts up the potential and talent, supporting the overall development needs of our students to facilitate a structured path from education to employment by providing a safe and supported space where creative talent  and imagination can flourish in a caring environment.</p>
         </div>
 
         <div className='md:w-2/3 flex flex-col justify-between gap-10'>

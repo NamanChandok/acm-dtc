@@ -2,13 +2,17 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
-import { Download, PictureAsPdf } from "@mui/icons-material";
+import { ArrowOutward } from "@mui/icons-material";
 import { storage } from "@/firebase";
 import { listAll, ref } from "firebase/storage";
-
 import { useEffect, useState } from "react";
+import { pdfjs, Document, Page } from "react-pdf";
+import 'react-pdf/dist/Page/AnnotationLayer.css';
+import 'react-pdf/dist/Page/TextLayer.css';
 
 export default function Resources() {
+
+  pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;  
 
   const [resources, setResources] = useState<string[]>([]);
   
@@ -38,14 +42,17 @@ export default function Resources() {
 
       <div className="grid md:grid-cols-4 gap-4">
         {resources.map((resource:String, index) => {
-          return <a key={index} target='_blank' href={'https://firebasestorage.googleapis.com/v0/b/acm-dtc.appspot.com/o/resources%2F'+resource+'?alt=media'} className="rounded-lg border-2 border-black overflow-hidden z-10 relative h-96 md:w-72 shadow-sm translate-y-4 hover:translate-y-0 hover:shadow-md transition-all duration-300">
-            <div className="w-full h-full flex flex-col gap-4 items-center p-4 justify-center">
-              <PictureAsPdf className="text-6xl" />
-              <p>{resource}</p>
-              <div className="bg-black flex items-center gap-3 text-white p-2 rounded-xl">
-                <Download className="text-2xl" />
-                Download
+          const pdfUrl = 'https://firebasestorage.googleapis.com/v0/b/acm-dtc.appspot.com/o/resources%2F'+resource+'?alt=media'
+          return <a target="_blank" key={index} href={pdfUrl} className="border-2 border-black rounded-lg overflow-hidden z-10 relative group h-96 md:w-72 shadow-sm hover:shadow-md transition-all duration-300 justify-center items-center flex">
+            <Document file={pdfUrl}>
+              <Page pageNumber={1} width={280} />
+            </Document>
+            <div className="bg-black/40 flex flex-col gap-2 items-center justify-center group-hover:opacity-100 opacity-0 transition-all duration-300 absolute inset-0 z-20">
+            <p className="text-white">{resource}</p>
+              <div className="bg-black text-white p-4 rounded-full">
+                <ArrowOutward className="text-5xl" />
               </div>
+              <small className="text-white">Download</small>
             </div>
           </a>
         })}
