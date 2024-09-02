@@ -97,7 +97,7 @@ export default function Home() {
   });
 
   const mentors = [
-    {name: 'Dr. Neha Jain', role: 'Faculty Sponsor', image: '/mentors/2.jpg'},
+    {name: 'Dr. Neha Jain', role: 'Faculty Sponsor', image: '/nehajain.jpeg'},
   ]
 
 
@@ -182,7 +182,7 @@ export default function Home() {
         
         <div className="flex flex-col md:flex-row justify-center gap-12">
           {mentors.map((mentor, index) => (
-            <div key={index} className="md:w-96 rounded-lg overflow-hidden shadow-md">
+            <div key={index} className="md:w-80 rounded-lg overflow-hidden shadow-md">
               <img src={mentor.image} alt={mentor.name} className="aspect-square" />
               <div className="bg-primary p-4">
                 <h3 className="text-xl font-semibold text-white">{mentor.name}</h3>
