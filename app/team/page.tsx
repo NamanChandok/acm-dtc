@@ -28,7 +28,7 @@ const team = [
   {name: "Shubham Katyan", role: "Social Head", image: "/team/shubham.jpg", year: "2nd Year, B.Tech CSE", linkedin: "/", mail: "/"},
   {name: "Kovidh Nougain", role: "Social Associate", image: "/team/kovidh.jpg", year: "2nd Year, B.Tech CSE", linkedin: "/", mail: "/"},
   {name: "Sanjam Kaur", role: "Social Associate", image: "/team/sanjam.jpg", year: "2nd Year, B.Tech CSE", linkedin: "/", mail: "/"},
-  {name: "Naman Chandok", role: "Web Associate", image: "/team/naman.jpeg", year: "3rd Year, B.Tech CSE", linkedin: "https://www.linkedin.com/in/naman-chandok-874b421b0/", mail: "mailto:namanchandok1@gmail.com"},
+  {name: "Naman Chandok", role: "Web Associate", image: "/team/naman.jpeg", year: "3rd Year, B.Tech CSE", linkedin: "https://www.linkedin.com/in/namanchandok/", mail: "mailto:namanchandok1@gmail.com"},
   {name: "Yuvraj Singh", role: "Web Associate", image: "/team/yuvraj.jpeg", year: "3rd Year, B.Tech CSE", linkedin: "/", mail: "/"},
   {name: "Abhinav Chauhaan", role: "Videographer", image: "/team/abhinav.jpg", year: "2nd Year, B.Tech CSE", linkedin: "/", mail: "/"},
   {name: "Brahmjyot Singh", role: "Videographer", image: "/team/brahmjyot.jpg", year: "3rd Year, B.Tech CSE", linkedin: "/", mail: "/"},
