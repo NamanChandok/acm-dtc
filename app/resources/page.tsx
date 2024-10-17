@@ -57,6 +57,7 @@ export default function Resources() {
             </div>
           </a>
         })}
+        {resources.length == 0 && <p className="text-center col-span-4">No resources available yet</p>}
       </div>
 
       </section>
