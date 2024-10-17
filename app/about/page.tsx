@@ -91,8 +91,8 @@ export default function About() {
           </div>
 
           <img src="/about_logo.png" alt="about" className="md:block hidden object-contain aspect-[4/3]" />
-          
-          <iframe src="https://www.youtube.com/embed/cUCa76oCZgs?si=K_1MsTMrFgiHTZb_" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen className="md:col-span-2 w-full h-[35rem]"></iframe>
+         
+          <iframe src="https://www.youtube.com/embed/4-m8KYYdaWc?si=qwfv8Y7t7cPUHPgJ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen className="md:col-span-2 w-full h-[35rem]"></iframe>
 
           <div className="space-y-3">
             <h3 className="uppercase text-sm font-medium text-primary">about acm dtc</h3>
