@@ -15,6 +15,7 @@
     "@mui/material": "^5.16.4",
     "firebase": "^10.13.1",
     "next": "14.2.5",
+    "nodemailer": "^6.9.16",
     "pdfjs-dist": "^4.6.82",
     "react": "^18",
     "react-dom": "^18",
@@ -23,6 +24,7 @@
   },
   "devDependencies": {
     "@types/node": "^20",
+    "@types/nodemailer": "^6.4.17",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",

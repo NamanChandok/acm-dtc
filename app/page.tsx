@@ -104,9 +104,16 @@ export default function Home() {
   const handleSubscribe = (e:any) => {
     e.preventDefault();
     const email = e.target[0].value;
-    console.log('Subscribed', email);
-
-    setSubscribed(true);
+    fetch('/api/mail', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({email: email})
+    }).then(res => res.json())
+    .then(data => console.log(data))
+    .catch(err => console.log(err))
+    .finally(() => setSubscribed(true));
   }
 
   return (

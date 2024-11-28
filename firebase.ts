@@ -2,6 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
+import { getDatabase } from "firebase/database";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -12,6 +13,7 @@ const firebaseConfig = {
   authDomain: "acm-dtc.firebaseapp.com",
   projectId: "acm-dtc",
   storageBucket: "acm-dtc.appspot.com",
+  databaseURL: "https://acm-dtc-default-rtdb.asia-southeast1.firebasedatabase.app",
   messagingSenderId: process.env.MESSAGING_SENDER_ID,
   appId: process.env.APP_ID,
   measurementId: process.env.MEASUREMENT_ID
@@ -21,4 +23,5 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const storage = getStorage(app);
-export {app, db, storage};
+const rtdb = getDatabase(app);
+export {app, db, storage, rtdb};
