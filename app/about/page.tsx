@@ -116,7 +116,7 @@ export default function About() {
             <p>A vast network of nearly 100,000 highly dedicated student and professional peers. A full year subscription to ACM magazines and news letters (Communications of the ACM, XRDS: Crossroads, MemberNet etc.). The option to subscribe to the full ACM Digital Library, which includes over 2 million pages of text. Become a member of computing community through one of hundreds of Professional and Student Chapters worldwide. Participation in ACM Distinguished Speakers Program (DSP). Renowned International Thought Leaders Speaking on the Most Important Topics in Computing Today. Unique volunteering opportunities to gain hands-on experience and knowledge of the marketplace.</p>
             <div className="space-x-2 pt-4">
               <a href="https://www.acm.org/membership/membership-benefits" className="btn-primary">Learn More</a>
-              <a href="https://linktr.ee/acm_dtc" className="btn-secondary">Join Us</a>
+              <a href="https://services.acm.org/public/qj/proflevel/proflevel_control.cfm?level=3&country=India&form_type=Student&promo=LEVEL&pay=DD" className="btn-secondary">Join ACM</a>
             </div>
           </div>
 
