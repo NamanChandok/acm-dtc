@@ -288,7 +288,7 @@ export default function Home() {
           
           {subscribed ? <p className="text-white font-medium opacity-80">Thanks for Subscribing!</p> :
           <form onSubmit={handleSubscribe} className="flex flex-col md:flex-row overflow-hidden bg-white md:w-1/2 lg:w-2/5 w-full rounded-lg">
-            <input type="email" required placeholder="Enter your email" className="p-4 w-full rounded-lg" />
+            <input type="text" required placeholder="Enter your email" className="p-4 w-full rounded-lg" />
             <input type="submit" className="p-4 bg-primary text-white cursor-pointer hover:bg-primary/90 transition-all duration-300 rounded-l-none text-sm uppercase" value="subscribe" />
           </form>}
         </div>

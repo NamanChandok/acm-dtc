@@ -7,6 +7,10 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     const email = body.email;
 
+    if (email.includes("@") === false) {
+        return NextResponse.json({ message: "Email not valid" });
+    }
+
     const rEmail = email.replace(/\./g, ',');
 
     const emailRef = ref(rtdb, 'subscribers');
@@ -20,7 +24,6 @@ export async function POST(req: NextRequest) {
     await set(child(emailRef, rEmail), {
         subscribedAt: new Date().toISOString()
     })
-
 
     const sender = {
         name: "ACM | Delhi Technical Campus",
@@ -43,6 +46,6 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({ message: "Mail sent successfully" });
     } catch (error) {
         console.error(error);
-        return NextResponse.json({ message: "Mail not sent" }, {status:  500});
+        return NextResponse.json({ message: "Mail not sent" });
     }
 }

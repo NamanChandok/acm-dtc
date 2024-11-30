@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "ACM DTC",
+  title: "Gallery | ACM DTC",
   description: "Your Gateway to Innovation and Excellence in Technology",
 };
 
