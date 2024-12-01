@@ -262,7 +262,7 @@ export default function Home() {
             <a href="" className="capitalize text-right underline underline-offset-2 decoration-2 decoration-primary text-primary text-lg font-medium">see more</a>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-4 mb-4">
+          <div className="flex flex-wrap md:justify-between justify-center mb-4">
             {resources.map((resource:String, index) => {
               const pdfUrl = 'https://firebasestorage.googleapis.com/v0/b/acm-dtc.appspot.com/o/resources%2F'+resource+'?alt=media'
               return <a target="_blank" key={index} href={pdfUrl} className="border-2 border-black rounded-lg overflow-hidden z-10 relative group h-96 md:w-72 shadow-sm hover:shadow-md transition-all duration-300 justify-center items-center flex">
