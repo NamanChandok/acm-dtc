@@ -135,7 +135,7 @@ export default function Home() {
           </div>
 
           <div className="space-x-4">
-            <a href="#about" className="btn-secondary">Know More</a>
+            <a href="" className="btn-secondary">Know More</a>
             <a href="https://linktr.ee/acm_dtc" target="_blank" className="btn-primary">Join Us</a>
           </div>
 
@@ -250,7 +250,7 @@ export default function Home() {
           </div>
           
           <div className="text-center">
-            <a href="/team" className="btn-secondary capitalize tracking-wide">See team members</a>
+            <a href="" className="btn-secondary capitalize tracking-wide">See team members</a>
           </div>
 
         <hr className="md:my-20 my-10 border-black/20" />
@@ -259,7 +259,7 @@ export default function Home() {
 
           <div className="flex flex-col md:flex-row justify-between md:items-center gap-2 mb-4">
             <h3 className={quantico.className+" font-semibold text-3xl uppercase"}>resources</h3>
-            <a href="/resources" className="capitalize text-right underline underline-offset-2 decoration-2 decoration-primary text-primary text-lg font-medium">see more</a>
+            <a href="" className="capitalize text-right underline underline-offset-2 decoration-2 decoration-primary text-primary text-lg font-medium">see more</a>
           </div>
 
           <div className="grid md:grid-cols-4 gap-4 mb-4">

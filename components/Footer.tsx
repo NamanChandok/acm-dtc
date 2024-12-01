@@ -27,7 +27,7 @@ export default function Footer({}: Props) {
                 <div className='flex flex-col gap-6'>
                     <h4 className={quantico.className+' uppercase text-xl md:mb-4 text-white font-semibold tracking-wider'}>Quick Links</h4>
                     <a href="/gallery" className='text-quaternary tracking-wide hover:text-white transition-all duration-300'>Gallery</a>
-                    <a href="/events" className='text-quaternary tracking-wide hover:text-white transition-all duration-300'>Events</a>
+                    <a href="" className='text-quaternary tracking-wide hover:text-white transition-all duration-300'>Events</a>
                     <a href="/resources" className='text-quaternary tracking-wide hover:text-white transition-all duration-300'>Resources</a>
                 </div>
 
@@ -39,7 +39,7 @@ export default function Footer({}: Props) {
                     <div className="space-x-2">
                         <a href="https://www.instagram.com/acm_dtc/" target="_blank" className="text-white hover:text-quaternary transition-all duration-300"><Instagram className="text-3xl" /></a>
                         <a href="https://www.linkedin.com/company/acm-student-chapter-delhi-technical-campus-ggsipu/" target="_blank" className="text-white hover:text-quaternary transition-all duration-300"><LinkedIn className="text-3xl" /></a>
-                        <a href="https://x.com/ACM_DTC" target="_blank" className="text-white hover:text-quaternary transition-all duration-300"><X className="text-3xl" /></a>
+                        <a href="" target="_blank" className="text-white hover:text-quaternary transition-all duration-300"><X className="text-3xl" /></a>
                     </div>
                 </div>
             </div>
