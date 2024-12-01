@@ -21,7 +21,7 @@ export default function Home() {
   pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;   
 
   const [eventScroll, setEventScroll] = useState(0);
-  const [eventScrollMax, setEventScrollMax] = useState(0);
+  const [eventScrollMax, setEventScrollMax] = useState(10);
   const [subscribed, setSubscribed] = useState(false);
 
   const [resources, setResources] = useState<string[]>([]);
@@ -69,10 +69,10 @@ export default function Home() {
     const left = document.getElementById('scrollLeft') as HTMLElement;
     const right = document.getElementById('scrollRight') as HTMLElement;
 
-    setEventScrollMax(events.scrollWidth - events.clientWidth);
 
     events?.addEventListener('scroll', () => {
       setEventScroll(events.scrollLeft);
+      setEventScrollMax(events.scrollWidth - events.clientWidth);
     });
     left?.addEventListener('click', () => {
       events.scrollLeft -= 336;
@@ -99,7 +99,6 @@ export default function Home() {
   const mentors = [
     {name: 'Dr. Neha Jain', role: 'Faculty Sponsor', image: '/nehajain.jpeg'},
   ]
-
 
   const handleSubscribe = (e:any) => {
     e.preventDefault();
@@ -223,7 +222,7 @@ export default function Home() {
             </div>
 
             <ArrowRight id="scrollRight" className="absolute -right-4 top-0 bottom-0 m-auto text-4xl text-primary bg-quaternary shadow-md rounded-full cursor-pointer" style={
-              eventScroll >=  eventScrollMax-1 ? {display: 'none'} : {}
+              eventScroll >=  eventScrollMax-2 ? {display: 'none'} : {display: 'block'}
             } />
           </div>
 
@@ -234,7 +233,7 @@ export default function Home() {
           <h2 className={quantico.className+" text-3xl font-semibold text-center uppercase"}>Meet our acm Chairperson</h2>
 
           <div className="rounded-xl bg-quaternary overflow-hidden mt-6 mb-8 flex md:flex-row-reverse flex-col md:justify-between">
-            <img src="/team/kartick_c.jpg" alt="" className="w-96 aspect-square object-cover object-top bg-slate-900" />
+            <img src="/team/kartick_c.jpg" alt="" className="md:w-96 aspect-square object-cover object-top bg-slate-900" />
             <div className="p-8 space-y-4 pt-12">
               <h3 className="text-2xl md:text-3xl font-semibold">Kartick Chauhaan</h3>
               <p className="max-w-2xl">I&apos;m Kartick Chauhaan, a final-year Computer Science student and the proud Chairperson of our ACM Student Chapter. As your Chairperson, I&apos;m dedicated to fostering a vibrant community for computer science enthusiasts. Join us for exciting events, workshops, and networking opportunities.
