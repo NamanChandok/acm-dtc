@@ -16,14 +16,14 @@ export default function Navbar({active}: Props) {
         <a href="/"><img src='/logo.png' alt='acm-dtc' className='w-48' /></a>
         <div className='flex flex-col md:flex-row gap-6'>
             <a href='/' className={`hover:font-semibold transition-all duration-300 ${active === 'home' ? 'font-semibold underline decoration-2 underline-offset-2' : ''}`}>Home</a>
-            <a href='' className={`hover:font-semibold transition-all duration-300 ${active === 'about' ? 'font-semibold underline decoration-2 underline-offset-2' : ''}`}>About</a>
+            <a href='/about' className={`hover:font-semibold transition-all duration-300 ${active === 'about' ? 'font-semibold underline decoration-2 underline-offset-2' : ''}`}>About</a>
             <a href='/gallery' className={`hover:font-semibold transition-all duration-300 ${active === 'gallery' ? 'font-semibold underline decoration-2 underline-offset-2' : ''}`}>Gallery</a>
             <a href='events' className={`hover:font-semibold transition-all duration-300 ${active === 'events' ? 'font-semibold underline decoration-2 underline-offset-2' : ''}`}>Events</a>
             <a href='/team' className={`hover:font-semibold transition-all duration-300 ${active === 'team' ? 'font-semibold underline decoration-2 underline-offset-2' : ''}`}>Team</a>
             <a href='/resources' className={`hover:font-semibold transition-all duration-300 ${active === 'resources' ? 'font-semibold underline decoration-2 underline-offset-2' : ''}`}>Resources</a>
         </div>
         <div className='h-max w-48 text-right'>
-            <a href="https://linktr.ee/acm_dtc" target="_blank" className='border-2 font-medium border-tertiary py-2 px-8 rounded-lg text-tertiary hover:bg-tertiary hover:text-white transition-all duration-300'>Join Us</a>
+            <a href="https://linktr.ee/acm_dtc" target="_blank" className='border-2 font-medium border-primary py-2 px-8 rounded-lg text-primary hover:bg-primary hover:text-white transition-all duration-300'>Join Us</a>
         </div>
     </nav>
     <button onClick={()=>{setMobileNavOpen(!mobileNavOpen)}} className={'rounded-full p-3 md:hidden bg-white fixed top-4 right-4 z-50 transition-all duration-300 '+(mobileNavOpen?'':'shadow-md')}>
@@ -33,12 +33,12 @@ export default function Navbar({active}: Props) {
       mobileNavOpen ? {transform: 'translateX(0)'} : {transform: 'translateX(100%)'}
     } >
       <a href='/' className={`hover:font-semibold transition-all duration-300 ${active === 'home' ? 'font-semibold underline decoration-2 underline-offset-2' : ''}`}>Home</a>
-      <a href='' className={`hover:font-semibold transition-all duration-300 ${active === 'about' ? 'font-semibold underline decoration-2 underline-offset-2' : ''}`}>About</a>
+      <a href='/about' className={`hover:font-semibold transition-all duration-300 ${active === 'about' ? 'font-semibold underline decoration-2 underline-offset-2' : ''}`}>About</a>
       <a href='/gallery' className={`hover:font-semibold transition-all duration-300 ${active === 'gallery' ? 'font-semibold underline decoration-2 underline-offset-2' : ''}`}>Gallery</a>
       <a href='/events' className={`hover:font-semibold transition-all duration-300 ${active === 'events' ? 'font-semibold underline decoration-2 underline-offset-2' : ''}`}>Events</a>
       <a href='/team' className={`hover:font-semibold transition-all duration-300 ${active === 'team' ? 'font-semibold underline decoration-2 underline-offset-2' : ''}`}>Team</a>
       <a href='/resources' className={`hover:font-semibold transition-all duration-300 ${active === 'resources' ? 'font-semibold underline decoration-2 underline-offset-2' : ''}`}>Resources</a>
-      <a href="/form" className='border-2 font-medium border-tertiary p-2 mt-3 w-max rounded-lg text-tertiary hover:bg-tertiary hover:text-white transition-all duration-300'>Join Us</a>
+      <a href="https://linktr.ee/acm_dtc" className='border-2 font-medium border-primary p-2 mt-3 w-max rounded-lg text-primary hover:bg-primary hover:text-white transition-all duration-300'>Join Us</a>
     </nav>
     </>
   )

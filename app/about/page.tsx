@@ -20,8 +20,8 @@ export default function About() {
 
     if (accordian == 1) {
       accordian1.style.opacity = "1";
-      accordian1.style.maxHeight = "100%";
-      accordian1.style.paddingBlock = "0.75rem";
+      accordian1.style.maxHeight = accordian1.scrollHeight + 20 + "px";
+      accordian1.style.paddingBlock = "0.5rem";
       accordian2.style.opacity = "0";
       accordian2.style.maxHeight = "0";
       accordian2.style.paddingBlock = "0";
@@ -33,8 +33,8 @@ export default function About() {
       accordian1.style.maxHeight = "0";
       accordian1.style.paddingBlock = "0";
       accordian2.style.opacity = "1";
-      accordian2.style.maxHeight = "100%";
-      accordian2.style.paddingBlock = "0.75rem";
+      accordian2.style.maxHeight = accordian2.scrollHeight + 20 + "px";
+      accordian2.style.paddingBlock = "0.5rem";
       accordian3.style.opacity = "0";
       accordian3.style.maxHeight = "0";
       accordian3.style.paddingBlock = "0";
@@ -46,8 +46,18 @@ export default function About() {
       accordian2.style.maxHeight = "0";
       accordian2.style.paddingBlock = "0";
       accordian3.style.opacity = "1";
-      accordian3.style.maxHeight = "100%";
-      accordian3.style.paddingBlock = "0.75rem";
+      accordian3.style.maxHeight = accordian3.scrollHeight + 20 + "px";
+      accordian3.style.paddingBlock = "0.5rem";
+    } else {
+      accordian1.style.opacity = "0";
+      accordian1.style.maxHeight = "0";
+      accordian1.style.paddingBlock = "0";
+      accordian2.style.opacity = "0";
+      accordian2.style.maxHeight = "0";
+      accordian2.style.paddingBlock = "0";
+      accordian3.style.opacity = "0";
+      accordian3.style.maxHeight = "0";
+      accordian3.style.paddingBlock = "0";
     }
   }, [accordian]);
 
@@ -100,12 +110,12 @@ export default function About() {
             <p>DTC ACM Student Chapter believes in providing a healthy environment where creativity and imagination can flourish. Through collaboration and engagement in a plethora of technical activities and projects, we envision to build a community of like-minded people who love to code, collaborate and have fun!</p>
           </div>
 
-          <div className="border-2 border-gray-200 rounded-md divide-y-2 divide-gray-200">
-            <p onClick={()=>{setAccordian(1)}} className="p-3 bg-gray-100 cursor-pointer text-lg font-semibold flex justify-between">01. Our Mission <KeyboardArrowDown className={accordian == 1 ? "rotate-180" : ""} /></p>
+          <div className="border-2 h-min border-gray-200 rounded-md divide-y-2 divide-gray-200 overflow-hidden">
+            <button onClick={()=>{accordian == 1 ? setAccordian(0) : setAccordian(1)}} className="w-full relative z-10 p-3 bg-gray-100 cursor-pointer text-lg font-semibold flex justify-between">01. Our Mission <KeyboardArrowDown className={accordian == 1 ? "rotate-180" : ""} /></button>
             <div id="accordian1" className="px-3 transition-all duration-300 opacity-0 max-h-0 will-change-[max-height]">To advance the field of computing and empower individuals within it, promoting innovation and excellence in computing education, research, and practice, while fostering a global community that collaborates, shares knowledge, and addresses critical societal challenges.</div>
-            <p onClick={()=>{setAccordian(2)}} className="p-3 bg-gray-100 cursor-pointer text-lg font-semibold flex justify-between">02. Our Vision <KeyboardArrowDown className={accordian == 2 ? "rotate-180" : ""} /></p>
+            <button onClick={()=>{accordian == 2 ? setAccordian(0) : setAccordian(2)}} className="w-full relative z-10 p-3 bg-gray-100 cursor-pointer text-lg font-semibold flex justify-between">02. Our Vision <KeyboardArrowDown className={accordian == 2 ? "rotate-180" : ""} /></button>
             <div id="accordian2" className="px-3 transition-all duration-300 opacity-0 max-h-0 will-change-[max-height]">Our vision is to be the leading global community that empowers computing professionals, students, and researchers by driving technological innovation, bridging academia and industry, and fostering inclusivity. We aim to create a collaborative environment where everyone, regardless of background, can access opportunities in computing and contribute to the advancement of society through responsible and transformative technology.</div>
-            <p onClick={()=>{setAccordian(3)}} className="p-3 bg-gray-100 cursor-pointer text-lg font-semibold flex justify-between">03. Our Plan <KeyboardArrowDown className={accordian == 3 ? "rotate-180" : ""} /></p>
+            <button onClick={()=>{accordian == 3 ? setAccordian(0) : setAccordian(3)}} className="w-full relative z-10 p-3 bg-gray-100 cursor-pointer text-lg font-semibold flex justify-between">03. Our Plan <KeyboardArrowDown className={accordian == 3 ? "rotate-180" : ""} /></button>
             <div id="accordian3" className="px-3 transition-all duration-300 opacity-0 max-h-0 will-change-[max-height]">To achieve our vision, we will organize educational and networking events, publish and share knowledge, build strategic partnerships, and support student development. Through workshops, seminars, hackathons, and collaborations, we aim to foster a thriving ecosystem where computing professionals can excel, students can reach their full potential, and society can benefit from the transformative power of technology</div>
           </div>
 

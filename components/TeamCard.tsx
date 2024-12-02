@@ -15,7 +15,7 @@ export default function TeamCard({name, role, image, linkedin, mail, year}: Prop
     <div className="group w-72 h-94 perspective-1000">
       <div className="h-94 w-72 preserve-3d relative group-hover:rotate-y-flip transition-all duration-700 shadow-md">
         <div className="backface-hidden absolute rounded-lg bg-gray-100 w-72 overflow-hidden">
-          <img src={image} className="w-72 aspect-square object-cover object-top" />
+          <img src={image} alt={name} className="w-72 aspect-square object-cover object-top" />
           <div className="bg-black p-3 space-y-1">
             <p className="text-white">{role}</p>
             <h1 className="text-xl font-semibold text-white">{name}</h1>

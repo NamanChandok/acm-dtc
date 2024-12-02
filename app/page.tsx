@@ -122,7 +122,7 @@ export default function Home() {
 
       {/* HERO */}
 
-      <section className="flex flex-col md:flex-row-reverse items-center gap-8 md:justify-between justify-center h-screen p-8 md:px-16 lg:px-32 shadow-lg">
+      <header className="flex flex-col md:flex-row-reverse items-center gap-8 md:justify-between justify-center h-screen p-8 md:px-16 lg:px-32 shadow-lg">
 
         <img src="/header-logo.png" alt="acm-dtc" className="hidden md:block w-96 aspect-square rounded-xl" />
 
@@ -134,7 +134,7 @@ export default function Home() {
           </div>
 
           <div className="space-x-4">
-            <a href="" className="btn-secondary">Know More</a>
+            <a href="#about" className="btn-secondary">Know More</a>
             <a href="https://linktr.ee/acm_dtc" target="_blank" className="btn-primary">Join Us</a>
           </div>
 
@@ -145,7 +145,7 @@ export default function Home() {
           </div>
         </div>
 
-      </section>
+      </header>
 
       {/* ABOUT */}
 
@@ -233,7 +233,7 @@ export default function Home() {
           <h2 className={quantico.className+" text-3xl font-semibold text-center uppercase"}>Meet our acm Chairperson</h2>
 
           <div className="rounded-xl bg-quaternary overflow-hidden mt-6 mb-8 flex md:flex-row-reverse flex-col md:justify-between">
-            <img src="/team/kartick_c.jpg" alt="" className="md:w-96 aspect-square object-cover object-top bg-slate-900" />
+            <img src="/team/kartick_c.jpg" alt="Kartick Chauhaan" className="md:w-96 aspect-square object-cover object-top bg-slate-900" />
             <div className="p-8 space-y-4 pt-12">
               <h3 className="text-2xl md:text-3xl font-semibold">Kartick Chauhaan</h3>
               <p className="max-w-2xl">I&apos;m Kartick Chauhaan, a final-year Computer Science student and the proud Chairperson of our ACM Student Chapter. As your Chairperson, I&apos;m dedicated to fostering a vibrant community for computer science enthusiasts. Join us for exciting events, workshops, and networking opportunities.
@@ -249,7 +249,7 @@ export default function Home() {
           </div>
           
           <div className="text-center">
-            <a href="" className="btn-secondary capitalize tracking-wide">See team members</a>
+            <a href="/team" className="btn-secondary capitalize tracking-wide">See team members</a>
           </div>
 
         <hr className="md:my-20 my-10 border-black/20" />
@@ -258,7 +258,7 @@ export default function Home() {
 
           <div className="flex flex-col md:flex-row justify-between md:items-center gap-2 mb-4">
             <h3 className={quantico.className+" font-semibold text-3xl uppercase"}>resources</h3>
-            <a href="" className="capitalize text-right underline underline-offset-2 decoration-2 decoration-primary text-primary text-lg font-medium">see more</a>
+            <a href="/resources" className="capitalize text-right underline underline-offset-2 decoration-2 decoration-primary text-primary text-lg font-medium">see more</a>
           </div>
 
           <div className="flex flex-wrap md:justify-between justify-center mb-4">
@@ -287,7 +287,7 @@ export default function Home() {
           
           {subscribed ? <p className="text-white font-medium opacity-80">Thanks for Subscribing!</p> :
           <form onSubmit={handleSubscribe} className="flex flex-col md:flex-row overflow-hidden bg-white md:w-1/2 lg:w-2/5 w-full rounded-lg">
-            <input type="text" required placeholder="Enter your email" className="p-4 w-full rounded-lg" />
+            <input type="email" required placeholder="Enter your email" className="p-4 w-full rounded-lg" />
             <input type="submit" className="p-4 bg-primary text-white cursor-pointer hover:bg-primary/90 transition-all duration-300 rounded-l-none text-sm uppercase" value="subscribe" />
           </form>}
         </div>
