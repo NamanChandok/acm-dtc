@@ -262,9 +262,9 @@ export default function Home() {
           </div>
 
           <div className="flex flex-wrap md:justify-between justify-center mb-4">
-            {resources.map((resource:String, index) => {
+            {resources.slice(0,4).map((resource:String, index) => {
               const pdfUrl = 'https://firebasestorage.googleapis.com/v0/b/acm-dtc.appspot.com/o/resources%2F'+resource+'?alt=media'
-              return <a target="_blank" key={index} href={pdfUrl} className="border-2 border-black rounded-lg overflow-hidden z-10 relative group h-96 md:w-72 shadow-sm hover:shadow-md transition-all duration-300 justify-center items-center flex">
+              return <a target="_blank" key={index} href={pdfUrl} className="border-2 border-black rounded-lg overflow-hidden z-10 relative group h-96 md:w-64 shadow-sm hover:shadow-md transition-all duration-300 justify-center items-center flex">
                 <Document file={pdfUrl}>
                   <Page pageNumber={1} width={280} />
                 </Document>
