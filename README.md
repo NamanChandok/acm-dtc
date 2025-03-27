@@ -14,8 +14,4 @@ A Next.js-based website for the ACM Student Chapter at DTC, dynamically fetching
    ```bash
    npm run dev
    ```
-4. Deploy with Vercel:
-   ```bash
-   vercel --prod
-   ```
 
