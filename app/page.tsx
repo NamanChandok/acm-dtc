@@ -368,9 +368,9 @@ export default function Home() {
 					/>
 				</div>
 				<p className="mx-auto max-w-4xl">
-					The ACM Student Chapter at DTC won the "Honorable Mention for
-					Outstanding Chapter Website Award" at the ACM India Student Chapter
-					Awards for the year 2024.
+					The ACM Student Chapter at DTC won the &quot;Honorable Mention for
+					Outstanding Chapter Website Award&quot; at the ACM India Student
+					Chapter Awards for the year 2024.
 				</p>
 
 				<hr className="md:my-20 my-10 border-black/20" />
