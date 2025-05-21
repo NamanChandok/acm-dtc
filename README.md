@@ -17,3 +17,6 @@ Admin Panel for website is available at https://github.com/NamanChandok/acm-dtc-
    npm run dev
    ```
 
+## License
+
+This project is licensed under the MIT License.
