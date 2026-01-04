@@ -14,7 +14,7 @@
     "@mui/icons-material": "^5.16.4",
     "@mui/material": "^5.16.4",
     "firebase": "^10.13.1",
-    "next": "14.2.5",
+    "next": "14.2.35",
     "nodemailer": "^6.9.16",
     "pdfjs-dist": "^4.6.82",
     "react": "^18",
